@@ -30,42 +30,16 @@ body {
   text-align: center;
 }
 
-.building {
-  width: 100px;
-  height: 200px;
-  background-color: #888;
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 50px);
-}
-
-.crane {
-  width: 80px;
-  height: 80px;
-  background-color: #777;
-  position: absolute;
-  bottom: 200px;
-  left: calc(50% - 40px);
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #777;
+  border-top: 5px solid transparent;
   border-radius: 50%;
-  animation: craneMove 4s linear infinite alternate;
+  animation: spin 1s linear infinite;
 }
 
-.load {
-  width: 30px;
-  height: 30px;
-  background-color: #444;
-  position: absolute;
-  bottom: 180px;
-  left: calc(50% - 15px);
-  animation: loadMove 4s linear infinite alternate;
-}
-
-@keyframes craneMove {
-  0% { transform: translateX(-10px); }
-  100% { transform: translateX(10px); }
-}
-
-@keyframes loadMove {
-  0% { transform: translateY(-5px); }
-  100% { transform: translateY(5px); }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
