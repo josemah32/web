@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,4 +20,52 @@ body {
   border-radius: 10px;
   background-color: #ffffff; /* White background for message */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 2; /* Ensure message is above animation */
+}
+
+.animation {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.building {
+  width: 100px;
+  height: 200px;
+  background-color: #888;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50px);
+}
+
+.crane {
+  width: 80px;
+  height: 80px;
+  background-color: #777;
+  position: absolute;
+  bottom: 200px;
+  left: calc(50% - 40px);
+  border-radius: 50%;
+  animation: craneMove 4s linear infinite alternate;
+}
+
+.load {
+  width: 30px;
+  height: 30px;
+  background-color: #444;
+  position: absolute;
+  bottom: 180px;
+  left: calc(50% - 15px);
+  animation: loadMove 4s linear infinite alternate;
+}
+
+@keyframes craneMove {
+  0% { transform: translateX(-10px); }
+  100% { transform: translateX(10px); }
+}
+
+@keyframes loadMove {
+  0% { transform: translateY(-5px); }
+  100% { transform: translateY(5px); }
 }
