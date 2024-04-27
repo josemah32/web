@@ -2,44 +2,57 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffd700; /* Yellow background */
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.message {
-  font-size: 36px;
+  max-width: 600px;
+  margin: 50px auto;
   text-align: center;
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
   border-radius: 10px;
-  background-color: #ffffff; /* White background for message */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  z-index: 2; /* Ensure message is above animation */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.animation {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.loading {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #777;
-  border-top: 5px solid transparent;
+.profile img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+h1 {
+  color: #333;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 20px;
+}
+
+.links li a {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.links li a:hover {
+  background-color: #2980b9;
+}
+
+.outside-container {
+  text-align: center;
+  margin-top: 20px; /* Ajusta el valor según sea necesario para el espaciado */
 }
